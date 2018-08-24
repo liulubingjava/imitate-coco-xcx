@@ -4,14 +4,23 @@
 		"urlCheck": false,
 		"es6": true,
 		"postcss": false,
-		"minified": true
+		"minified": true,
+		"newFeature": true
 	},
-	"compileType": "weapp",
+	"compileType": "miniprogram",
 	"libVersion": "1.5.2",
-	"appid": "",
-	"projectname": "imitate-coco-xcx",
+	"appid": "wx89e0bb8e90b0ca60",
+	"projectname": "%E6%89%AB%E7%A0%81%E7%82%B9%E9%A4%90%E5%9F%BA%E7%A1%80",
 	"condition": {
-		"weapp": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
 			"current": -1,
 			"list": [
 				{
@@ -45,14 +54,6 @@
 					"query": ""
 				}
 			]
-		},
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
 		}
 	}
 }
