@@ -11,10 +11,7 @@
   <!-- 操作按钮 -->
   <view class='btn-bar'>
     <view class='btn-block' bindtap='golist'>
-      <view class="btn_op1">开始订餐</view>
-    </view>
-    <view class='btn-block'>
-      <view class="btn_op2">预约订餐</view>
+      <view class="btn_op1">开始点餐</view>
     </view>
   </view>
   <!-- 中部广告 -->
