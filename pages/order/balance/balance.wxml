@@ -1,4 +1,5 @@
 <!--pages/order/balance/balance.wxml-->
+<!--订单详情-->
 <view>
   <view class='top-bar'>
     <label class='top-left-label'>取餐时间</label>

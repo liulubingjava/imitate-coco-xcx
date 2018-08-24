@@ -1,42 +1,43 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/list/list",
     "pages/order/balance/balance",
     "pages/mine/mine",
     "pages/order/list/list",
-    "pages/order/detail/detail"
+    "pages/order/detail/detail",
+    "pages/mine/coupon/coupon"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FF9C35",
     "navigationBarTitleText": "北极冰",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
-    "tabBar": {
-      "color": "#8a8a8a",
-      "selectedColor": "#FF9C35",
-      "borderStyle": "black",
-      "list": [
-        {
-          "selectedIconPath": "images/home_s.png",
-          "iconPath": "images/home.png",
-          "pagePath": "pages/index/index",
-          "text": "首页"
-        },
-        {
-          "selectedIconPath": "images/order_s.png",
-          "iconPath": "images/order.png",
-          "pagePath": "pages/order/list/list",
-          "text": "订单"
-        },
-        {
-          "selectedIconPath": "images/mine_s.png",
-          "iconPath": "images/mine.png",
-          "pagePath": "pages/mine/mine",
-          "text": "我的"
-        }
-      ]
-    }
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#FF9C35",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/home_s.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/order_s.png",
+        "iconPath": "images/order.png",
+        "pagePath": "pages/list/list",
+        "text": "点餐"
+      },
+      {
+        "selectedIconPath": "images/mine_s.png",
+        "iconPath": "images/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
 }

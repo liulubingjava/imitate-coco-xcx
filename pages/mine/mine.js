@@ -26,10 +26,15 @@ Page({
   },
   bitphone:function(){
     wx.makePhoneCall({
-      phoneNumber: '1340000' 
+      phoneNumber: '13230686959' 
+    })
+  },
+  goDetail:function(event){
+    wx.navigateTo({
+      url: '/pages/order/detail/detail'
     })
   }
- 
+  
 
  
 })

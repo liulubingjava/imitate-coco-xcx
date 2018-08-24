@@ -1,4 +1,5 @@
 <!--pages/order/detail/detail.wxml-->
+<!--订单成功后返回的页面-->
 <view>
   <view class='go-center go-top-10' >
     <view class="card-box">
