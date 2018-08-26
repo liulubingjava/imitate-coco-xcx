@@ -1,0 +1,16 @@
+<template name="post-item">
+<view class='dec-page'>
+  <view>
+    <image class='topimage' src='{{listData[currentType].foods[currentIndex].image_url}}'></image>
+  </view>
+  <view class='content'>
+    <view class='title'>{{listData[currentType].foods[currentIndex].name}}</view>
+    <view class='monthbuy'>月售311</view>
+    <view class='jiage'>
+      <text  class='price'>¥ {{listData[currentType].foods[currentIndex].price}}.00</text>
+      <i class="iconfont icon-jiahao2fill plus-icon" data-type="{{index}}" data-index="{{indexs}}" bindtap="selectInfo"></i>
+    </view>
+    <text class='describe'>新鲜水果搭配浓郁冰凉</text>
+  </view>
+</view>
+</template>

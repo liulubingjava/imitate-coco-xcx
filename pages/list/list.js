@@ -23,7 +23,8 @@ Page({
     sumMonney: 0,
     cupNumber:0,
     showCart: false,
-    loading: false
+    loading: false,
+    detail:false
   },
 
   /**
@@ -121,6 +122,7 @@ Page({
     var index = e.currentTarget.dataset.index;
     this.setData({
       showModalStatus: !this.data.showModalStatus,
+      detail: !this.data.detail,
       currentType: type,
       currentIndex: index,
       sizeIndex: 0,
@@ -223,6 +225,21 @@ Page({
         url: '../order/balance/balance'
       })
     }
+  },
+  /**
+   * 展示详情页面
+   */
+  showDetail: function (e){
+    var type = e.currentTarget.dataset.type;
+    var index = e.currentTarget.dataset.index;
+    this.setData({
+      detail: !this.data.detail,
+      currentType: type,
+      currentIndex: index,
+      sizeIndex: 0,
+      sugarIndex: 0,
+      temIndex: 0
+    })
   },
 
   onReady: function () {

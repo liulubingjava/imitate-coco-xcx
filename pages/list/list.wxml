@@ -1,6 +1,5 @@
-<!--点餐页-->
 <view>
-<!-- 左侧菜单 -->
+  <!-- 左侧菜单 -->
   <view class="list-left-menu">
     <view wx:for="{{listData}}" wx:key="unique" class="{{index==activeIndex?'list-left-menu-box-selected':'list-left-menu-box-unselect'}}" data-index="{{index}}" bindtap='selectMenu'>
       <view class="list-menu-name">{{item.name}}</view>
@@ -11,20 +10,38 @@
     <view class="content" id="a{{index}}" wx:for="{{listData}}" wx:key="unique">
       <view class='list-tab'>{{item.name}}</view>
       <view class='content-list' wx:for="{{item.foods}}" wx:key="unique" wx:for-item="items" wx:for-index="indexs">
-        <view class='list-image-box'>
+        <!--TODO llb 这里做出更改 增加单击事件 showDetail-->
+        <view class='list-image-box' bindtap="showDetail">
           <image class="list-image" mode="widthFix" src='{{items.image_url}}'></image>
         </view>
-        <view class='issue-name'>
+        <view class='issue-name' bindtap="showDetail">
           <view>{{items.name}}</view>
           <view style='margin-top:20rpx;color:#F05A86'>
             ¥ {{items.specfoods[0].price}}.00
             <i class="iconfont icon-jiahao2fill plus-icon" data-type="{{index}}" data-index="{{indexs}}" bindtap="selectInfo"></i>
           </view>
-
         </view>
       </view>
     </view>
   </scroll-view>
+
+  <!--TODO llb 这里做出更改 引入商品详情模板，当用户点击某条信息时 根据detail 的值来判断是否显示此模板-->
+  <view class="drawer_screen" bindtap="showDetail" data-statu="close" wx:if="{{detail}}"></view>
+  <view class='dec-page' wx:if="{{detail}}">
+    <view class='content'>
+      <view class='imgcontent'>
+        <image class='topimage' src='{{listData[currentType].foods[currentIndex].image_url}}'></image>
+      </view>
+      <view class='title'>{{listData[currentType].foods[currentIndex].name}}</view>
+      <view class='monthbuy'>月售311</view>
+      <view class='jiage'>
+        <text class='price'>¥ {{listData[currentType].foods[currentIndex].specfoods[0].price}}.00</text>
+        <i class="iconfont icon-jiahao2fill plus-icon" data-type="{{index}}" data-index="{{indexs}}" bindtap="selectInfo"></i>
+      </view>
+      <text class='describe'>新鲜水果搭配浓郁冰凉</text>
+    </view>
+  </view>
+
   <!-- 底部操作菜单 -->
   <view class="operate-bar" wx:if="{{loading}}">
     <view class='gouwuche'>

@@ -1,0 +1,48 @@
+/* pages/list/productdetail/productdetail.wxss */
+
+.dec-page .content{
+  margin-left: 7%; 
+  height: 800rpx;
+  width: 86%; 
+  overflow: hidden;  
+  position: fixed;
+  top: 5%;  
+  z-index: 1001;  
+  background: #FFFFFF;  
+  border-radius: 4px;
+  
+}
+.dec-page .topimage{
+  width: 86%;
+  height: 500rpx;
+}
+.dec-page .title{
+  font-size: 36rpx;
+  font-weight:700;
+  color: #3b3939;
+  margin-left: 20rpx;
+  letter-spacing:3rpx;
+  margin-bottom: 20rpx;
+}
+.dec-page .monthbuy{
+  color: rgb(87, 85, 85);
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.dec-page .jiage{
+  margin-bottom: 20rpx;
+  vertical-align: center;
+}
+.dec-page .price{
+  font-size: 36rpx;
+  color:red;
+}
+.dec-page .plus-icon{
+  float:right;
+  color:#FF9C35;
+  font-size:60rpx;
+}
+.dec-page .describe{
+  color: #9c9a9a;
+  font-size: 32rpx;
+}

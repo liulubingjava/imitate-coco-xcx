@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/logs/logs",
     "pages/list/list",
@@ -7,6 +8,8 @@
     "pages/mine/mine",
     "pages/order/detail/detail",
     "pages/mine/coupon/coupon"
+    
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
