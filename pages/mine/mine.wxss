@@ -26,7 +26,7 @@
 }
 .card-info{
   width: 80%;
-  height:370rpx;
+  height:300rpx;
   box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(255, 156, 53, 10);
   z-index: 1000;
   background: white;

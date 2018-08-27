@@ -11,7 +11,7 @@
       <view class='list-tab'>{{item.name}}</view>
       <view class='content-list' wx:for="{{item.foods}}" wx:key="unique" wx:for-item="items" wx:for-index="indexs">
         <!--TODO llb 这里做出更改 增加单击事件 showDetail-->
-        <view class='list-image-box' bindtap="showDetail">
+        <view class='list-image-box' bindtap="showDetail" data-type="{{index}}" data-index="{{indexs}}">
           <image class="list-image" mode="widthFix" src='{{items.image_url}}'></image>
         </view>
         <view class='issue-name'>
@@ -36,13 +36,13 @@
       <view class='monthbuy'>月售311</view>
       <view class='jiage'>
         <text class='price'>¥ {{listData[currentType].foods[currentIndex].specfoods[0].price}}.00</text>
-        <i class="iconfont icon-jiahao2fill plus-icon" data-type="{{index}}" data-index="{{indexs}}" bindtap="selectInfo"></i>
+        <i class="iconfont icon-jiahao2fill plus-icon" data-index="{{indexs}}" bindtap="selectInfoDetail"></i>
       </view>
       <text class='describe'>新鲜水果搭配浓郁冰凉</text>
     </view>
   </view>
 
-  <!-- 底部操作菜单 -->
+  <!-- 购物车弹窗 -->
   <view class="operate-bar" wx:if="{{loading}}">
     <view class='gouwuche'>
       <view style='padding:5px;display:flex'>
@@ -59,7 +59,7 @@
     </view>
   </view>
 </view>
-<!-- 选择弹窗 -->
+<!-- 选择口味弹窗 -->
 <view class="drawer_screen" bindtap="selectInfo" data-statu="close" wx:if="{{showModalStatus}}"></view>
 <view class="drawer_box_ad" wx:if="{{showModalStatus}}">
   <view class="drawer_content_ad">

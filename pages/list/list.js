@@ -115,7 +115,7 @@ Page({
     }
   },
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 选择口味
    */
   selectInfo: function (e) {
     var type = e.currentTarget.dataset.type;
@@ -128,6 +128,14 @@ Page({
       sugarIndex: 0,
       temIndex: 0
     });
+  },
+  /** 商品详情里选择口味选择口味*/
+  selectInfoDetail:function (e){
+    this.setData({
+      showModalStatus: !this.data.showModalStatus,
+      detail: !this.data.detail,
+      
+    })
   },
 
   chooseSE: function (e) {
@@ -203,7 +211,7 @@ Page({
       cupNumber: this.data.cupNumber+1
     });
   },
-  /**添加商品数量 */
+  /**减少商品数量 */
   decNumber: function (e) {
     var index = e.currentTarget.dataset.index;
     console.log(index)
@@ -233,25 +241,18 @@ Page({
    * 展示详情页面
    */
   showDetail: function (e){
-    var ty = e.currentTarget.dataset.type;
+    var type = e.currentTarget.dataset.type;
     var index = e.currentTarget.dataset.index;
     this.setData({
       detail: !this.data.detail,
-      currentType: ty,
+      currentType: type,
       currentIndex: index,
       sizeIndex: 0,
       sugarIndex: 0,
       temIndex: 0
     })
   },
-  /**关闭展示详情页 */
-  offDetail: function (e){
-    this.setData({
-      detail: !this.data.detail,
-      currentType:null,
-      currentIndex:null
-    })
-  },
+ 
   onReady: function () {
 
   },

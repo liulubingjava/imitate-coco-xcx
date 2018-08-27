@@ -19,8 +19,8 @@ Page({
     
   },
   golist: function () {
-    wx.navigateTo({
-      url: '../list/list'
+    wx.switchTab({
+      url: '../list/list',
     })
   },
 })
