@@ -27,9 +27,22 @@ Page({
     
   },
   gopay:function(){
-    wx.navigateTo({
-      url: '../detail/detail'
+    wx.requestPayment({
+      'appId':'wx89e0bb8e90b0ca60',
+      'timeStamp': '',
+      'nonceStr': '',
+      'package': '',
+      'signType': 'MD5',
+      'paySign': '',
+      'success': function (res) {
+        wx.navigateTo({
+          url: '../detail/detail'
+        })
+      },
+      'fail': function (res) {
+      }
     })
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

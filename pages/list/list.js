@@ -55,18 +55,18 @@ Page({
       }
     })
   },
+  /** 左侧美食列表的对应方法 */
   selectMenu: function (e) {
     var index = e.currentTarget.dataset.index
-    console.log(index)
+    console.log('点击的美食列表下标为'+index)
+    var toview = 'a'+index
     this.setData({
       activeIndex: index,
-      toView: 'a' + index,
-      // scrollTop: 1186
+      toView:toview
     })
-    console.log(this.data.toView);
   },
   scroll: function (e) {
-    console.log(e)
+    console.log(e.detail.scrollTop)
     var dis = e.detail.scrollTop
     if (dis > 0 && dis < 1189) {
       this.setData({
