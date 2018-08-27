@@ -14,7 +14,7 @@
         <view class='list-image-box' bindtap="showDetail">
           <image class="list-image" mode="widthFix" src='{{items.image_url}}'></image>
         </view>
-        <view class='issue-name' bindtap="showDetail">
+        <view class='issue-name'>
           <view>{{items.name}}</view>
           <view style='margin-top:20rpx;color:#F05A86'>
             ¥ {{items.specfoods[0].price}}.00

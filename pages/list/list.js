@@ -122,7 +122,6 @@ Page({
     var index = e.currentTarget.dataset.index;
     this.setData({
       showModalStatus: !this.data.showModalStatus,
-      detail: !this.data.detail,
       currentType: type,
       currentIndex: index,
       sizeIndex: 0,
@@ -150,7 +149,7 @@ Page({
       });
     }
   },
-
+  /**添加购物车 */
   addToCart: function () {
     var a = this.data
     var addItem = {
@@ -171,8 +170,9 @@ Page({
     });
     console.log(this.data.cartList)
   },
+  /**显示购物车 */
   showCartList: function () {
-    console.log(this.data.showCart)
+    console.log("showCart 的值："+this.data.showCart)
     if (this.data.cartList.length != 0) {
       this.setData({
         showCart: !this.data.showCart,
@@ -180,6 +180,7 @@ Page({
     }
 
   },
+  /**清空购物车 */
   clearCartList: function () {
     this.setData({
       cartList: [],
@@ -187,6 +188,7 @@ Page({
       sumMonney: 0
     });
   },
+  /**添加商品数量 */
   addNumber: function (e) {
     var index = e.currentTarget.dataset.index;
     console.log(index)
@@ -201,6 +203,7 @@ Page({
       cupNumber: this.data.cupNumber+1
     });
   },
+  /**添加商品数量 */
   decNumber: function (e) {
     var index = e.currentTarget.dataset.index;
     console.log(index)
@@ -230,18 +233,25 @@ Page({
    * 展示详情页面
    */
   showDetail: function (e){
-    var type = e.currentTarget.dataset.type;
+    var ty = e.currentTarget.dataset.type;
     var index = e.currentTarget.dataset.index;
     this.setData({
       detail: !this.data.detail,
-      currentType: type,
+      currentType: ty,
       currentIndex: index,
       sizeIndex: 0,
       sugarIndex: 0,
       temIndex: 0
     })
   },
-
+  /**关闭展示详情页 */
+  offDetail: function (e){
+    this.setData({
+      detail: !this.data.detail,
+      currentType:null,
+      currentIndex:null
+    })
+  },
   onReady: function () {
 
   },
