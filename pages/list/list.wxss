@@ -249,7 +249,7 @@
 /* productdetail.wxss start */
 .dec-page .content{
   margin-left: 7%; 
-  height: 800rpx;
+  height: 820rpx;
   width: 86%; 
   overflow: hidden;  
   position: fixed;
@@ -291,6 +291,6 @@
 }
 .dec-page .describe{
   color: #9c9a9a;
-  font-size: 32rpx;
+  font-size: 26rpx;
 }
 /* productdetail.wxss end */

@@ -38,7 +38,7 @@
         <text class='price'>¥ {{listData[currentType].foods[currentIndex].specfoods[0].price}}.00</text>
         <i class="iconfont icon-jiahao2fill plus-icon" data-index="{{indexs}}" bindtap="selectInfoDetail"></i>
       </view>
-      <text class='describe'>新鲜水果搭配浓郁冰凉</text>
+      <text class='describe'>{{listData[currentType].foods[currentIndex].description}}</text>
     </view>
   </view>
 
