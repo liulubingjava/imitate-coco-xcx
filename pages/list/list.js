@@ -72,9 +72,9 @@ Page({
   },
   /** 左侧美食列表的对应方法 */
   selectMenu: function(e) {
-    var index = e.currentTarget.dataset.index
-    console.log('点击的美食列表下标为' + index)
-    var toview = 'a' + index
+    var index = e.currentTarget.dataset.index;
+    console.log('点击的美食列表下标为' + index);
+    var toview = 'a' + index;
     this.setData({
       activeIndex: index,
       toView: toview
@@ -84,10 +84,15 @@ Page({
     var dis = e.detail.scrollTop;
     var listData = this.data.listData; //获取listDate
     var scrollLenth = this.data.scrollLenth; //获取scrollLenth
-    for (var i = 1; i < listData.length; i++) {
-      if (dis > scrollLenth[i - 1] && dis < scrollLenth[i]) {
+    for (var i = 0; i < listData.length; i++) {
+      if (dis > scrollLenth[i]  && dis < scrollLenth[i+1]) {
         this.setData({
-          activeIndex: i-1,
+          activeIndex: i,
+        })
+      }
+      if (dis > scrollLenth[listData.length-1]){
+        this.setData({
+          activeIndex: listData.length - 1,
         })
       }
     } 
