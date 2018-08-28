@@ -27,6 +27,8 @@ Page({
     
   },
   gopay:function(){
+    var nowDate = new Date();
+    var timeStamp = Math.floor(nowDate.getTime() / 1000);
     wx.requestPayment({
       'appId':'wx89e0bb8e90b0ca60',
       'timeStamp': '',
